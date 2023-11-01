@@ -15,7 +15,8 @@ public class Customer {
 
 	//Parameterized Constructor
 	public Customer(String customerName, int customerId, float customerPhone) {
-		this();  //to call default constructor
+		//this();  //to call default constructor
+		System.out.println("Parameterized Constructor");
 		this.customerName = customerName;
 		this.customerId = customerId;
 		this.customerPhone = customerPhone;

@@ -14,7 +14,27 @@ public class ConstructorDemo {
 		
 		//scanner class to accept user input
 		Scanner sc=new Scanner(System.in);
-		String name=sc.next();
+		String name;
+		int id;
+		float phone;
+
+		System.out.println("Enter name");
+	    name=sc.next();  //name
+	    System.out.println("Enter id");
+	    id=sc.nextInt(); //id
+	    System.out.println("Enter Phone no");
+	    phone=sc.nextFloat(); //phone
+	    
+	    Customer cust3=new Customer(name,id,phone);
+	    System.out.println(cust3);
+	   
+	    Customer cust4=new Customer();
+	    cust4.setCustomerName(name);
+	    cust4.setCustomerId(id);
+	    cust4.setCustomerPhone(phone);
+	    System.out.println(cust4);
+	    
+	    
 		
 	}
 
