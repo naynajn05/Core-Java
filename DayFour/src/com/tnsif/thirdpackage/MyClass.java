@@ -1,4 +1,4 @@
-//to demonstrate private constructor
+//to demonstrate private constructor and singleton class
 package com.tnsif.thirdpackage;
 
 public class MyClass {
@@ -7,6 +7,7 @@ public class MyClass {
 	
 	private static MyClass obj=new MyClass();
 
+	//getter and setter
 	public int getId() {
 		return id;
 	}
