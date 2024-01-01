@@ -8,6 +8,7 @@ public class AgeValidator {
 		if (age<18)
 		{
 			throw new InvalidAgeException("Invalid age..You are not eligible for voting.");
+			
 		}
 	}
 }
