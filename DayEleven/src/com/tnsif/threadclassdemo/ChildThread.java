@@ -1,7 +1,7 @@
 //to demonstrate multithreading using Thread class
 package com.tnsif.threadclassdemo;
 
-public class ChildThread extends Thread{
+public class ChildThread extends Thread {
 	private int n;
 	private String msg;
 	
@@ -20,7 +20,7 @@ public class ChildThread extends Thread{
 			} catch (InterruptedException e) {
 				System.err.println("Thread is interrupted "+e.getMessage());
 			}
-		System.out.println("message "+msg+" "+"number "+n+" "+Thread.currentThread().getName());	
+		System.out.println("message "+msg+" "+"number "+i+" "+Thread.currentThread().getName());	
 		}
 		
 	}

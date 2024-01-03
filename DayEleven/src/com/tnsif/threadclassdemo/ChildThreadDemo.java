@@ -9,7 +9,7 @@ public class ChildThreadDemo {
 		t1.start();
 		t2.start();
 		
-		System.out.println("End of the main method");
+		System.out.println("End of the main method"); //main thread
 
 	}
 
