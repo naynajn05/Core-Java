@@ -3,7 +3,9 @@ package com.tnsif.listinterface.builtinobjects;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 public class ArrayListDemo {
 
@@ -18,6 +20,7 @@ public class ArrayListDemo {
 		list1.add(false);
 		list1.add('A');
 		list1.add(20);
+		
 		System.out.println("is null added to the list? "+list1.add(null));
 		System.out.println(list1);
 		System.out.println(list1.size());
@@ -43,6 +46,47 @@ public class ArrayListDemo {
 		System.out.println(list1); 
 		
 
+		
+		//use generics to create list-Homogeneous list
+		List<String> names=new ArrayList<String>();
+		names.add("Gauri");
+		names.add("Sanket");
+		names.add("Apurva");
+		names.add("Pratiksha");
+		//names.add(10);
+		System.out.println(names);
+		
+		Collections.sort(names);
+		System.out.println(names);
+		
+		Collections.reverse(names);
+		System.out.println(names);
+		
+
+		/*
+		 * List<Object> list2=new ArrayList<Object>(); list2.add(12); list2.add(names);
+		 * System.out.println(list2);
+		 */
+		
+		//Traverse a list
+		System.out.println("----------------------");
+		Iterator<String> i=names.iterator();
+		while (i.hasNext())
+		{
+			String str=i.next();
+			System.out.println(str);
+			if(str.equals("Gauri"))
+				i.remove();
+		}
+		System.out.println(names);
+		
+		//traverse in the backward direction
+		ListIterator<String> ll=names.listIterator(names.size());
+		while(ll.hasPrevious())
+		{
+			String lstr=ll.previous();
+			System.out.println(lstr);
+		}
 	}
 
 }
